@@ -30,6 +30,12 @@ def index():
 
 # prediction function
 def ValuePredictor(to_predict_list):
+    to_predict_list[0] = to_predict_list[0] / 150
+    to_predict_list[2] = to_predict_list[2] / 4.8
+    to_predict_list[3] = to_predict_list[3] / 10
+    to_predict_list[4] = to_predict_list[4] / 80
+    to_predict_list[5] = to_predict_list[5] / 40
+    to_predict_list[6] = to_predict_list[6] / 6
     to_predict = np.array(to_predict_list).reshape(1, 7)
     print(to_predict)
     meta = model("input1.csv")
